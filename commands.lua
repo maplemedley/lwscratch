@@ -2,6 +2,14 @@ local utils = ...
 local S = utils.S
 
 
+minetest.register_craftitem ("lwscratch:cmd_act_punch_front", {
+	description = S("Punch forward"),
+	short_description = S("Punch forward"),
+	groups = { not_in_creative_inventory = 1 },
+	inventory_image = "lw_act_punch_front.png",
+	stack_max = 1
+})
+
 
 minetest.register_craftitem ("lwscratch:cmd_act_dig_back", {
 	description = S("Dig backward"),

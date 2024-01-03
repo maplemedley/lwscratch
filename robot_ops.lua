@@ -394,6 +394,33 @@ end
 
 
 
+function utils.robot_punch (robot_pos, side)
+	local meta = minetest.get_meta (robot_pos)
+	local cur_node = minetest.get_node_or_nil (robot_pos)
+	if not meta or not cur_node then
+		return nil
+	end
+
+	local pos = get_robot_side (robot_pos, cur_node.param2, side)
+	if not pos then
+		return nil
+	end
+
+	local node = utils.get_far_node (pos)
+	if not node then
+		return nil
+	end
+
+	minetest.punch_node (pos)
+
+	meta:set_int ("delay_counter",
+		math.ceil (utils.settings.robot_action_delay / utils.settings.running_tick))
+
+	return node.name
+end
+
+
+
 function utils.robot_place (robot_pos, side, nodename)
 	nodename = tostring (nodename or "")
 

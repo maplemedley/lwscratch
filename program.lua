@@ -285,7 +285,9 @@ local function check_turn (program)
 	return true
 end
 
-
+local function check_punch (program)
+	return true
+end
 
 local function check_pull (program)
 	local cmd = program:next_cell (false)
@@ -623,6 +625,7 @@ local check_table =
 	["lwscratch:cmd_act_dig_back_up"] = check_dig,
 	["lwscratch:cmd_act_dig_down"] = check_dig,
 	["lwscratch:cmd_act_dig_up"] = check_dig,
+	["lwscratch:cmd_act_punch_front"] = check_punch,
 	["lwscratch:cmd_act_move_back"] = check_move,
 	["lwscratch:cmd_act_move_down"] = check_move,
 	["lwscratch:cmd_act_move_front"] = check_move,
@@ -959,6 +962,15 @@ local function run_dig (program, robot_pos)
 	return true
 end
 
+
+local function run_punch (program, robot_pos)
+	local cmd = program:cur_command ()
+	local side = "front" -- assume lwscratch:cmd_act_dig_front
+
+	utils.robot_punch (robot_pos, side)
+
+	return true
+end
 
 
 local function run_move (program, robot_pos)
@@ -1404,6 +1416,7 @@ local run_table =
 	["lwscratch:cmd_act_dig_back_up"] = run_dig,
 	["lwscratch:cmd_act_dig_down"] = run_dig,
 	["lwscratch:cmd_act_dig_up"] = run_dig,
+	["lwscratch:cmd_act_punch_front"] = run_punch,
 	["lwscratch:cmd_act_move_back"] = run_move,
 	["lwscratch:cmd_act_move_down"] = run_move,
 	["lwscratch:cmd_act_move_front"] = run_move,

@@ -79,6 +79,7 @@ local encode_cmd =
 	["lwscratch:cmd_cond_detect_back_up"]		= "CU",
 	["lwscratch:cmd_cond_detect_down"]			= "CV",
 	["lwscratch:cmd_cond_detect_up"]				= "CW",
+	["lwscratch:cmd_act_punch_front"]				= "ZA",
 	[""]													= "ZZ",
 }
 
@@ -162,6 +163,7 @@ local dencode_cmd =
 	["CV"] = "lwscratch:cmd_cond_detect_down",
 	["CW"] = "lwscratch:cmd_cond_detect_up",
 	["ZX"] = "itemstack",
+	["ZA"] = "lwscratch:cmd_act_punch_front",
 	["ZZ"] = "",
 }
 

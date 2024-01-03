@@ -301,7 +301,7 @@ function utils.prep_inventory (inv, program)
 		"lwscratch:cmd_act_put_stack",
 		"",
 		"lwscratch:cmd_act_craft",
-		"",
+		"lwscratch:cmd_act_punch_front",
 		"",
 
 		"lwscratch:cmd_act_drop",
