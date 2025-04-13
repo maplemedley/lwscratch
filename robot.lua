@@ -663,12 +663,12 @@ minetest.register_node ("lwscratch:robot", {
 		}
 	},
    selection_box = {
-      type = "fixed",
-      fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
+  	type = "fixed",
+  	fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
    },
    collision_box = {
-      type = "fixed",
-      fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
+  	type = "fixed",
+  	fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
    },
 	groups = { cracky = 2, oddly_breakable_by_hand = 2 },
 	sounds = {
@@ -731,12 +731,12 @@ minetest.register_node ("lwscratch:robot_on", {
 		}
 	},
    selection_box = {
-      type = "fixed",
-      fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
+  	type = "fixed",
+  	fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
    },
    collision_box = {
-      type = "fixed",
-      fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
+  	type = "fixed",
+  	fixed = { -0.5, -0.5, -0.375, 0.5, 0.5, 0.375 }
    },
 	groups = { cracky = 2, oddly_breakable_by_hand = 2, not_in_creative_inventory = 1 },
 	sounds = {
