@@ -83,6 +83,11 @@ local encode_cmd =
 	[""]													= "ZZ",
 	["lwscratch:cmd_cond_value_contains"]      = "GA",
 	["lwscratch:cmd_cond_value_matches_regex"] = "GB",
+	["lwscratch:cmd_line_indent"]              = "GC",
+	["lwscratch:cmd_line_unindent"]            = "GD",
+	["lwscratch:cmd_line_shift_down"]          = "GE",
+	["lwscratch:cmd_line_shift_up"]            = "GF",
+	["lwscratch:cmd_act_punch_front"]          = "ZA",
 }
 
 
@@ -166,6 +171,10 @@ local dencode_cmd =
 	["CW"] = "lwscratch:cmd_cond_detect_up",
 	["GA"] = "lwscratch:cmd_cond_value_contains",
 	["GB"] = "lwscratch:cmd_cond_value_matches_regex",
+	["GC"] = "lwscratch:cmd_line_indent",
+	["GD"] = "lwscratch:cmd_line_unindent",
+	["GE"] = "lwscratch:cmd_line_shift_down",
+	["GF"] = "lwscratch:cmd_line_shift_up",
 	["ZX"] = "itemstack",
 	["ZA"] = "lwscratch:cmd_act_punch_front",
 	["ZZ"] = "",

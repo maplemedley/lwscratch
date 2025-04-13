@@ -386,6 +386,42 @@ local function allow_metadata_inventory_move (pos, from_list, from_index, to_lis
 								inv:set_stack (to_list, s + 10, nil)
 							end
 							return 0
+						elseif command == "lwscratch:cmd_line_indent" then
+							local inv_linebeg = base
+							local inv_lineend = base + 8
+							for s = inv_lineend, inv_linebeg, -1 do
+								inv:set_stack (to_list, s + 1, inv:get_stack (to_list, s))
+								inv:set_stack (to_list, s, nil)
+							end
+							return 0
+						elseif command == "lwscratch:cmd_line_unindent" then
+							local inv_linebeg = base + 1
+							local inv_lineend = base + 9
+							for s = inv_linebeg, inv_lineend, 1 do
+								inv:set_stack (to_list, s - 1, inv:get_stack (to_list, s))
+								inv:set_stack (to_list, s, nil)
+							end
+							return 0
+						elseif command == "lwscratch:cmd_line_shift_down" then
+							local inv_linebeg = base
+							local inv_lineend = base + 9
+							for s = inv_linebeg, inv_lineend, 1 do
+								local stack_below = inv:get_stack (to_list, s + 10)
+								local stack_curr  = inv:get_stack (to_list, s)
+								inv:set_stack (to_list, s,      stack_below)
+								inv:set_stack (to_list, s + 10, stack_curr)
+							end
+							return 0
+						elseif command == "lwscratch:cmd_line_shift_up" then
+							local inv_linebeg = base - 10
+							local inv_lineend = base - 10 + 9
+							for s = inv_linebeg, inv_lineend, 1 do
+								local stack_below = inv:get_stack (to_list, s + 10)
+								local stack_curr  = inv:get_stack (to_list, s)
+								inv:set_stack (to_list, s,      stack_below)
+								inv:set_stack (to_list, s + 10, stack_curr)
+							end
+							return 0
 						end
 					end
 				end
