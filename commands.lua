@@ -11,6 +11,7 @@ minetest.register_craftitem ("lwscratch:cmd_act_punch_front", {
 })
 
 
+
 minetest.register_craftitem ("lwscratch:cmd_act_dig_back", {
 	description = S("Dig backward"),
 	short_description = S("Dig backward"),
@@ -475,7 +476,7 @@ minetest.register_craftitem ("lwscratch:cmd_cond_value_matches_regex", {
 	description = S("Variable matches the following regex string"),
 	short_description = S("Variable matches regex"),
 	groups = { not_in_creative_inventory = 1 },
-	inventory_image = "lw_cond_value_equal.png",
+	inventory_image = "lw_cond_value_matches_regex.png",
 	stack_max = 1
 })
 
@@ -485,7 +486,7 @@ minetest.register_craftitem ("lwscratch:cmd_cond_value_contains", {
 	description = S("Variable contains the following"),
 	short_description = S("Variable contains"),
 	groups = { not_in_creative_inventory = 1 },
-	inventory_image = "lw_cond_value_equal.png",
+	inventory_image = "lw_cond_value_contains.png",
 	stack_max = 1
 })
 
@@ -803,7 +804,7 @@ minetest.register_craftitem ("lwscratch:cmd_line_indent", {
 	description = S("Indent line"),
 	short_description = S("Indent line"),
 	groups = { not_in_creative_inventory = 1 },
-	inventory_image = "lw_line_insert.png",
+	inventory_image = "lw_line_indent.png",
 	stack_max = 1
 })
 
@@ -812,7 +813,7 @@ minetest.register_craftitem ("lwscratch:cmd_line_unindent", {
 	description = S("Unindent line"),
 	short_description = S("Unindent line"),
 	groups = { not_in_creative_inventory = 1 },
-	inventory_image = "lw_line_insert.png",
+	inventory_image = "lw_line_unindent.png",
 	stack_max = 1
 })
 
@@ -821,7 +822,7 @@ minetest.register_craftitem ("lwscratch:cmd_line_shift_down", {
 	description = S("Shift line down"),
 	short_description = S("Shift line down"),
 	groups = { not_in_creative_inventory = 1 },
-	inventory_image = "lw_line_insert.png",
+	inventory_image = "lw_line_shift_down.png",
 	stack_max = 1
 })
 
@@ -830,7 +831,7 @@ minetest.register_craftitem ("lwscratch:cmd_line_shift_up", {
 	description = S("Shift line up"),
 	short_description = S("Shift line up"),
 	groups = { not_in_creative_inventory = 1 },
-	inventory_image = "lw_line_insert.png",
+	inventory_image = "lw_line_shift_up.png",
 	stack_max = 1
 })
 
